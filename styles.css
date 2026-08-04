@@ -31,3 +31,12 @@
   .hero::before{background:linear-gradient(90deg,rgba(10,12,14,.92),rgba(10,12,14,.48))}
 }
 .hero h1{font-size:clamp(38px,5vw,65px);max-width:780px}
+.logo-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:960px;margin:0 auto}
+.logo-card{width:auto;height:165px;padding:22px 28px;background:#fff}
+.logo-card img{width:auto;height:auto;max-width:230px;max-height:105px;object-fit:contain}
+.logo-card-cypco img{max-height:132px;max-width:210px}
+.logo-card-square img{max-height:118px}
+.logo-card-wide img{max-width:245px;max-height:92px}
+.logo-card-dpc img{max-width:220px;max-height:100px}
+@media(max-width:850px){.logo-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.logo-row{grid-template-columns:1fr}.logo-card{height:150px}}
