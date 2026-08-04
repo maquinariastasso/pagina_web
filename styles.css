@@ -3,19 +3,30 @@
 .hero{display:block;height:auto;min-height:0;padding-top:78px}.hero-content{padding:80px 0 55px}.hero-stats{position:relative;left:auto;bottom:auto;transform:none;margin:0 auto}.phone-link{position:relative;z-index:4;margin-bottom:0}.floating-whatsapp{border:none;outline:none}.floating-whatsapp svg{display:block}@media(max-width:850px){.hero{min-height:0}.hero-content{padding:72px 0 55px}.hero-stats{position:relative;left:auto;bottom:auto;transform:none}}@media(max-width:560px){.hero{min-height:0}.hero-content{padding:62px 0 48px}.hero-stats{position:relative}}
 .floating-whatsapp::after{display:none}.floating-whatsapp img{display:block;width:36px;height:36px;position:relative;z-index:2}
 .hero{
-  background-image:
-    linear-gradient(90deg,rgba(10,12,14,.93) 0%,rgba(10,12,14,.65) 50%,rgba(10,12,14,.1) 100%),
-    linear-gradient(0deg,rgba(10,12,14,.75),transparent 45%),
-    url("assets/retroexcavadora-new-holland.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center center;
+  background:#111315;
 }
-.hero-image,.hero-overlay{display:none}
+.hero-image{
+  display:block;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center center;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(10,12,14,.93) 0%,rgba(10,12,14,.65) 50%,rgba(10,12,14,.1) 100%),
+    linear-gradient(0deg,rgba(10,12,14,.75),transparent 45%);
+  pointer-events:none;
+}
+.hero-overlay{display:none}
 @media(max-width:850px){
-  .hero{
-    background-image:
-      linear-gradient(90deg,rgba(10,12,14,.92),rgba(10,12,14,.48)),
-      url("assets/retroexcavadora-new-holland.jpg");
-  }
+  .hero::before{background:linear-gradient(90deg,rgba(10,12,14,.92),rgba(10,12,14,.48))}
 }
