@@ -46,3 +46,7 @@
 .accessory-photo-fork{object-position:58% 52%}
 @media(max-width:850px){.accessory-gallery{height:500px}.accessory-gallery img{height:100%}}
 @media(max-width:560px){.accessory-gallery{height:420px}}
+.accessory-gallery{grid-template-rows:minmax(0,3fr) minmax(0,2fr);height:500px}
+.accessory-gallery .accessory-photo-hammer{object-fit:contain;object-position:center;background:#171a1d}
+@media(max-width:850px){.accessory-gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1fr;height:auto}.accessory-gallery img{height:auto;aspect-ratio:4/3}}
+@media(max-width:560px){.accessory-gallery{grid-template-columns:1fr}.accessory-gallery .accessory-photo-fork{height:230px;aspect-ratio:auto}}
