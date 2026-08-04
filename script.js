@@ -23,7 +23,7 @@ document.querySelector('#quote-form')?.addEventListener('submit', (event) => {
     'Trabajo solicitado:',
     data.get('mensaje')
   ].join('\n');
-  window.location.href = `mailto:aaadrianlazo@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:maquinariastasso@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
