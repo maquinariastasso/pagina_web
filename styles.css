@@ -82,3 +82,15 @@
 .related-grid a:hover{border-color:#b98700}
 @media(max-width:850px){.service-page-links,.service-layout,.related-grid{grid-template-columns:1fr}.quote-panel{position:static}.service-hero{padding:135px 0 70px}}
 @media(max-width:560px){.service-page-links a{align-items:flex-start;flex-direction:column;gap:7px}.service-hero .lead{font-size:18px}}
+
+
+/* Clientes adicionales y contenido útil para búsquedas */
+.clients-more{max-width:720px;margin:32px auto 0;text-align:center;color:var(--muted);font-size:17px}
+.logo-card-pmt img{max-width:190px;max-height:92px}
+.logo-card-novatec img{max-width:190px;max-height:82px}
+.seo-faq{background:#f3f1eb}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.faq-item{background:#fff;border:1px solid var(--line);padding:28px}
+.faq-item h3{font:600 24px/1.2 "Oswald",sans-serif;text-transform:uppercase;margin:0 0 12px}
+.faq-item p{color:var(--muted);margin:0}
+@media(max-width:720px){.faq-grid{grid-template-columns:1fr}}
