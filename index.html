@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260822-1">
+  <link rel="stylesheet" href="styles.css?v=20260822-2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,7 +82,7 @@
         <h1>La maquinaria que tu obra necesita, cuando la necesita.</h1>
         <p class="hero-lead">Arriendo de retroexcavadoras con equipos confiables, atención directa y soporte técnico en terreno.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="tel:+56933220593">Llamar ahora</a>
+          <a class="button button-primary button-with-icon" href="tel:+56933220593"><svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.7 2.8h3.1l1.4 4.1-2 1.6a14.2 14.2 0 0 0 6.3 6.3l1.6-2 4.1 1.4v3.1c0 2.1-1.7 3.8-3.8 3.8C9.4 21.1 2.9 14.6 2.9 6.6c0-2.1 1.7-3.8 3.8-3.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Llamar ahora</span></a>
           <a class="button button-whatsapp" href="https://wa.me/56933220593?text=Hola%2C%20quiero%20cotizar%20el%20arriendo%20de%20una%20retroexcavadora." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
         </div>
         <a class="phone-link" href="tel:+56933220593">+56 9 3322 0593</a>
@@ -114,7 +114,7 @@
         <div class="fleet-grid">
           <article class="machine-card featured">
             <img src="assets/retroexcavadora-en-obra.jpg" alt="Retroexcavadora New Holland B90B trabajando en una obra" loading="lazy">
-            <div class="machine-body"><p class="machine-type">Retroexcavadora</p><h3>New Holland B90B</h3><ul><li><b>Potencia</b><span>95 HP</span></li><li><b>Tracción</b><span>4 × 4</span></li><li><b>Profundidad</b><span>4,33 m</span></li><li><b>Balde cargador</b><span>1 m³</span></li></ul><a href="#contacto">Consultar disponibilidad <span>→</span></a></div>
+            <div class="machine-body"><p class="machine-type">Retroexcavadora</p><h3>New Holland B90B</h3><ul><li><b>Potencia</b><span>95 HP</span></li><li><b>Tracción</b><span>4 × 4</span></li><li><b>Profundidad</b><span>4,4 m</span></li><li><b>Balde cargador</b><span>1 m³</span></li></ul><a href="#contacto">Consultar disponibilidad <span>→</span></a></div>
           </article>
           <article class="machine-card">
             <div class="accessory-gallery" aria-label="Retroexcavadoras con equipamiento adicional">
@@ -188,7 +188,8 @@
           <label>Comuna<input name="comuna" autocomplete="address-level2" required></label>
           <label>¿Qué trabajo necesitas?<textarea name="mensaje" rows="5" required placeholder="Describe el tipo de trabajo, ubicación y fecha aproximada."></textarea></label>
           <button class="button button-primary" type="submit">Enviar solicitud por correo</button>
-          <p class="form-note">Al enviar se abrirá tu aplicación de correo con la información preparada.</p>
+          <button class="button button-whatsapp" id="whatsapp-submit" type="button">Enviar solicitud por WhatsApp</button>
+          <p class="form-note">Elige enviar por correo o WhatsApp; se abrirá la aplicación correspondiente con la información preparada.</p>
         </form>
       </div>
     </section>
@@ -210,6 +211,6 @@
   <a class="floating-whatsapp" href="https://wa.me/56933220593?text=Hola%2C%20quiero%20cotizar%20el%20arriendo%20de%20una%20retroexcavadora." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
     <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" width="36" height="36">
   </a>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260822-2"></script>
 </body>
 </html>
