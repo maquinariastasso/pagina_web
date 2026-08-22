@@ -11,11 +11,11 @@ menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () 
   toggle?.setAttribute('aria-expanded', 'false');
 }));
 
-document.querySelector('#quote-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = 'Solicitud de cotización — Maquinarias Tasso';
-  const body = [
+const quoteForm = document.querySelector('#quote-form');
+
+function buildQuoteMessage(form) {
+  const data = new FormData(form);
+  return [
     `Nombre: ${data.get('nombre')}`,
     `Teléfono: ${data.get('telefono')}`,
     `Comuna: ${data.get('comuna')}`,
@@ -23,7 +23,19 @@ document.querySelector('#quote-form')?.addEventListener('submit', (event) => {
     'Trabajo solicitado:',
     data.get('mensaje')
   ].join('\n');
+}
+
+quoteForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const subject = 'Solicitud de cotización — Maquinarias Tasso';
+  const body = buildQuoteMessage(event.currentTarget);
   window.location.href = `mailto:maquinariastasso@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+document.querySelector('#whatsapp-submit')?.addEventListener('click', () => {
+  if (!quoteForm?.reportValidity()) return;
+  const message = ['Hola, quiero solicitar una cotización a Maquinarias Tasso.', '', buildQuoteMessage(quoteForm)].join('\n');
+  window.open(`https://wa.me/56933220593?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
