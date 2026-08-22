@@ -87,8 +87,7 @@
 /* Clientes adicionales y contenido útil para búsquedas */
 .clients-more{max-width:720px;margin:32px auto 0;text-align:center;color:var(--muted);font-size:17px}
 .logo-card-pmt img{max-width:190px;max-height:92px}
-.logo-card-novatec{overflow:hidden}
-.logo-card-novatec img{width:230px;max-width:none;max-height:none;transform:translateY(-10px)}
+.logo-card-novatec img{max-width:200px;max-height:72px}
 .seo-faq{background:#f3f1eb}
 .faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .faq-item{background:#fff;border:1px solid var(--line);padding:28px}
